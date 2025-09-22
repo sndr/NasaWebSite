@@ -10,5 +10,14 @@
         <input type="text" placeholder="Search...">
         <button class="search_button">Search</button>
     </div>
+    <div>
+        @for (item of items;track $index) {
+            <div class="item">
+                <h3>{{item.title}}</h3>
+                <p>{{item.description}}</p>
+            </div>
+        }
+    </div>
+
 </body>
 </html>
