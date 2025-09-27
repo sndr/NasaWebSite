@@ -1,17 +1,12 @@
-import { Component, inject, signal } from '@angular/core';
-import { Router, RouterOutlet, RouterLink } from '@angular/router';
+import { Component, signal } from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [ RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
   protected readonly title = signal('NasaWebSite');
-  private router = inject(Router);
-
-  searchredirect() {
-    this.router.navigate(['/search']);
-  }
-      }
+}
